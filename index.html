@@ -69,35 +69,68 @@
 
         //Generare un numero random da 1 a 6, sia per il giocatore sia per il compute. Stabilire il vincitore, in base a chi fa il punteggio più alto.
 
-        alert('Lancia il dado!');
-        var min = 1;
-        var max = 6;
-        var player = Math.floor(Math.random() * (max - min + 1)) + min;
-        var computer = Math.floor(Math.random() * (max - min + 1)) + min;
+        // alert('Lancia il dado!');
+        // var min = 1;
+        // var max = 6;
+        // var player = Math.floor(Math.random() * (max - min + 1)) + min;
+        // var computer = Math.floor(Math.random() * (max - min + 1)) + min;
 
-        console.log('Il tuo punteggio è: ', player, 'Il punteggio del computer è: ', computer);
+        // console.log('Il tuo punteggio è: ', player, 'Il punteggio del computer è: ', computer);
 
-        if (player > computer) {
-            console.log('Hai vinto!!!');
-            document.getElementById('titolo').innerHTML = 'IL BENE HA TRIONFATO!';
-            document.getElementById('p1').innerHTML = 'I tuoi genitori saranno davvero fieri di te!';
-            document.getElementById('p2').innerHTML = 'Hai totalizzato ' + player + ' punti';
-            document.getElementById('p3').innerHTML = 'Il male, questa volta, si è fermato a ' + computer + ' punti';
-        }  
-        else if (player < computer) {
-            console.log('Mi dispiace...hai perso tutto.');
-            document.getElementById('titolo').innerHTML = 'IL MALE TI HA DISINTEGRATO';
-            document.getElementById('p1').innerHTML = 'Muhahahaha!';
-            document.getElementById('p2').innerHTML = 'Hai totalizzato solo ' + player + ' punti';
-            document.getElementById('p3').innerHTML = 'Il male si è preso gioco di te facendo ' + computer + ' punti';
-        }  
-        else {
-            console.log('Hai ottenuto un pareggio!');
-            document.getElementById('titolo').innerHTML = 'NESSUN VINCITORE OGGI...';
-            document.getElementById('p1').innerHTML = 'Tutto è rimandato alla prossima battaglia';
-            document.getElementById('p2').innerHTML = 'Il tuo punteggio di ' + player + ' non ti è bastato per vincere';
-            document.getElementById('p3').innerHTML = 'Ma neanche per perdere';
-        }
+        // if (player > computer) {
+        //     console.log('Hai vinto!!!');
+        //     document.getElementById('titolo').innerHTML = 'IL BENE HA TRIONFATO!';
+        //     document.getElementById('p1').innerHTML = 'I tuoi genitori saranno davvero fieri di te!';
+        //     document.getElementById('p2').innerHTML = 'Hai totalizzato ' + player + ' punti';
+        //     document.getElementById('p3').innerHTML = 'Il male, questa volta, si è fermato a ' + computer + ' punti';
+        // }  
+        // else if (player < computer) {
+        //     console.log('Mi dispiace...hai perso tutto.');
+        //     document.getElementById('titolo').innerHTML = 'IL MALE TI HA DISINTEGRATO';
+        //     document.getElementById('p1').innerHTML = 'Muhahahaha!';
+        //     document.getElementById('p2').innerHTML = 'Hai totalizzato solo ' + player + ' punti';
+        //     document.getElementById('p3').innerHTML = 'Il male si è preso gioco di te facendo ' + computer + ' punti';
+        // }  
+        // else {
+        //     console.log('Hai ottenuto un pareggio!');
+        //     document.getElementById('titolo').innerHTML = 'NESSUN VINCITORE OGGI...';
+        //     document.getElementById('p1').innerHTML = 'Tutto è rimandato alla prossima battaglia';
+        //     document.getElementById('p2').innerHTML = 'Il tuo punteggio di ' + player + ' non ti è bastato per vincere';
+        //     document.getElementById('p3').innerHTML = 'Ma neanche per perdere';
+        // }
+
+
+            //soluzione 2 con array
+
+            alert('Lancia il dado!');
+            var dado = [ 1, 2, 3, 4, 5, 6 ];
+            var player = dado[Math.floor(Math.random() * dado.length)];
+            var computer = dado[Math.floor(Math.random() * dado.length)];
+                
+            console.log('Il tuo punteggio è: ', player, 'Il punteggio del computer è: ', computer);
+
+         if (player > computer) {
+             console.log('Hai vinto!!!');
+             document.getElementById('titolo').innerHTML = 'IL BENE HA TRIONFATO!';
+             document.getElementById('p1').innerHTML = 'I tuoi genitori saranno davvero fieri di te!';
+             document.getElementById('p2').innerHTML = 'Hai totalizzato ' + player + ' punti';
+             document.getElementById('p3').innerHTML = 'Il male, questa volta, si è fermato a ' + computer + ' punti';
+         }  
+         else if (player < computer) {
+             console.log('Mi dispiace...hai perso tutto.');
+             document.getElementById('titolo').innerHTML = 'IL MALE TI HA DISINTEGRATO';
+             document.getElementById('p1').innerHTML = 'Muhahahaha!';
+             document.getElementById('p2').innerHTML = 'Hai totalizzato solo ' + player + ' punti';
+             document.getElementById('p3').innerHTML = 'Il male si è preso gioco di te facendo ' + computer + ' punti';
+         }  
+         else {
+             console.log('Hai ottenuto un pareggio!');
+             document.getElementById('titolo').innerHTML = 'NESSUN VINCITORE OGGI...';
+             document.getElementById('p1').innerHTML = 'Tutto è rimandato alla prossima battaglia';
+             document.getElementById('p2').innerHTML = 'Il tuo punteggio di ' + player + ' non ti è bastato per vincere';
+             document.getElementById('p3').innerHTML = 'Ma neanche per perdere';
+         }
+
     </script>
 
 </body>
