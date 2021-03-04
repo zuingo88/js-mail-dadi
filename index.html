@@ -52,11 +52,19 @@
         for (var i = 0; i < mailList.length; i++) {
 
             if (mailList.includes(userMail) == 1) {
-                console.log('Ingresso riuscito!')
+                console.log('Accesso riuscito!');
+                document.getElementById('titolo').innerHTML = 'Ciao ' + userMail + '!';
+                document.getElementById('p1').innerHTML = 'Accesso riuscito';
+                document.getElementById('p2').innerHTML = 'Bentornato!';
             } else {
-                console.log('Utente non registrato')
+                console.log('Utente non registrato');
+                document.getElementById('titolo').innerHTML = 'Ops!';
+                document.getElementById('p1').innerHTML = 'Accesso non riuscito';
+                document.getElementById('p2').innerHTML = 'Registrati ora';
             }
         }
+
+        
 
     </script>
 
