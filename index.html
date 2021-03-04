@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prova_js1</title>
+    <style>
+        #container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 750px;
+            height: 400px;
+            margin: auto;
+            color: white;
+            background-color: teal;
+            border: solid 2px black;
+            border-radius: 20px;
+            overflow: auto;
+        }
+
+        .pi {
+            transition: all 0.5s;
+        }
+
+        .pi:hover {
+            scale: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <h1 id="titolo">ciao mondo</h1>
+        <p id="p1" class="pi">tanti saluti</p>
+        <p id="p2" class="pi">tanti saluti</p>
+        <p id="p3" class="pi">tanti saluti</p>
+    </div>
+
+    <script>
+
+        //Chiedi all'utente la sua email, controlla che sia nella lista di chi può accedere, stampa un messaggio appropriato
+
+        var mailList = ['12@gmail.com', '34@gmail.com', '56@gmail.com', '78@gmail.com', '90@gmail.com']
+
+        var userMail = prompt('inserisci la tua e-mail');
+
+        for (var i = 0; i < mailList.length; i++) {
+
+            if (mailList.includes(userMail) == 1) {
+                console.log('Ingresso riuscito!')
+            } else {
+                console.log('Utente non registrato')
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
